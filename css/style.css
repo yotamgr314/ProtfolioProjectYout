@@ -1,0 +1,82 @@
+*{    /* Ensuring a clean starting path. */
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    min-height: 100vh; /*effective way to ensure that the content covers at least the entire height of the screen, enhancing the user experience and making it easier to layout elements on the page.*/
+    background-image: url(../images/HeaderPicture.jpg);
+    background-size: cover;/* Ensures the background image covers the entire element while maintaining its aspect ratio, without leaving empty spaces */
+    background-repeat: no-repeat; /* so the background image wont repeat itself */
+    background-position: center; /* Centers the background image within the element both horizontally and vertically */
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+/* WEB NAVIGATOR BAR */
+nav {
+    background-color: white; /* the background of the navbar */
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.1) /* (kav koteret below the navbar) Adds a shadow effect to an element to create a sense of depth */
+}
+
+
+
+nav ul{
+    width:100%; /* to make the nav bar links span the full width of the nav container */
+    list-style: none; /* removes the doted icons from each <li> */
+    display: flex; /* ul acts as a container, declaring it dislay:flex makes it a flexbox layout(allows us to use justify-coten, align-items), every element the ul will follow the rules of flexbox  */
+    justify-content: flex-end; /* Aligns the flexbox items to the right end of the flexbox container */
+    align-items: center; /* Vertically centers flex or grid items within the container */
+}
+
+nav li {
+    height: 50px; /* heigh of each <li> in the navbar(the height of the nav bar is dettermned by the heigh of <li>). */
+}
+
+nav a {
+    height: 100%; /* Ensures the <a> tag fills the full height of its <li> container for better clickability. */
+    padding: 0 30px; /* Adds 30px padding space to the left and right sides of the element. */
+    text-decoration: none; /* Removes the underline from the links in the navbar. */
+    display: flex; /* Makes the <a> element a flex container for aligning its content. */
+    align-items: center; /* Vertically centers the text within the <a> element. */
+    color: black;
+}
+
+nav a:hover {
+    background-color: #f0f0f0;
+}
+
+nav li:first-child { /* Pushes the first <li> (Home) element to the left, separating it from the rest of the items, userfull for home buttons */
+    margin-right:auto; 
+}
+
+/* PHONE HAMBURGER SIDEBAR */
+
+.sidebar {
+    position: fixed; /* Keeps the sidebar fixed in place relative to the browser window, will remain in the same position even when scrolling the screen. */
+    top: 0; /* Positions the sidebar to start from the very top of the screen. */
+    left: 0; /* Positions the sidebar to stick to the left side of the screen. */
+    height: 100vh; /* Makes the sidebar span the entire height of the screen. */
+    width: 250px; /* Sets the width of the sidebar to 250px. */
+    background-color: rgba(255,255,255,0.2); /* background color of the sidebar menu */
+    backdrop-filter: blur(18px); /* Adds a blur effect to the background */
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.2); /* making the edge of the menu bar to have a blue effect. */
+    list-style: none; /* removes the dots from the <li> in the list */
+    display: flex; /* Sets the sidebar as a flexbox container */
+    flex-direction: column; /* Arranges the elements in the flexbox in column */
+    align-items:flex-start; /* Aligns the elements within the column in a straight vertical line */
+    justify-content: flex-start; /* Aligns the elements within the column to start from the top edge of the flex container */
+}
+
+.sidebar li {
+    width: 100%; /* making every <li> element in the sidebar clickable 100% of width of the sidebar. */
+}
+
+
+
+
+
+/* SDs */
+
+
+
