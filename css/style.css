@@ -16,7 +16,8 @@ body {
 /* WEB NAVIGATOR BAR */
 nav {
     background-color: white; /* the background of the navbar */
-    box-shadow: 3px 3px 5px rgba(0,0,0,0.1) /* (kav koteret below the navbar) Adds a shadow effect to an element to create a sense of depth */
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.1); /* (kav koteret below the navbar) Adds a shadow effect to an element to create a sense of depth */
+    z-index: 10;
 }
 
 
@@ -62,16 +63,33 @@ nav li:first-child { /* Pushes the first <li> (Home) element to the left, separa
     backdrop-filter: blur(18px); /* Adds a blur effect to the background */
     box-shadow: -10px 0 10px rgba(0, 0, 0, 0.2); /* making the edge of the menu bar to have a blue effect. */
     list-style: none; /* removes the dots from the <li> in the list */
-    display: flex; /* Sets the sidebar as a flexbox container */
+    display: none; /* Sets the sidebar as a flexbox container */
     flex-direction: column; /* Arranges the elements in the flexbox in column */
     align-items:flex-start; /* Aligns the elements within the column in a straight vertical line */
     justify-content: flex-start; /* Aligns the elements within the column to start from the top edge of the flex container */
+    
 }
 
 .sidebar li {
     width: 100%; /* making every <li> element in the sidebar clickable 100% of width of the sidebar. */
 }
 
+#menu-button img {
+    height: 26px;
+    width: 26px;
+}
 
 
 
+#x-button {
+    height: 26; 
+    width: 26;
+}
+
+@media(max-width: 800px)
+{
+    .webNavIcons {
+        display: none;
+    }
+    
+}
